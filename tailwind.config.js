@@ -9,7 +9,7 @@ module.exports = {
       lg: "976px",
       xl: "1400px",
     },
-    extend: {
+    extend: { 
       colors: {
         sectionColor: "hsl(209, 100%, 97%)",
         darkBodyColor: "hsl(216, 100%, 4%)",

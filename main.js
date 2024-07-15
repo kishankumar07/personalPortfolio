@@ -52,7 +52,52 @@ function lightMode(){
 }
 
 /*~~~~~~~~~~~~~~~ TABS ~~~~~~~~~~~~~~~*/
+let tabs = document.querySelectorAll('.tab');
+let indicator = document.querySelector('.indicator');
+let all = document.querySelectorAll('.work_card');
+let uiux = document.querySelectorAll('.uiux');
+let apps = document.querySelectorAll('.app');
+let branding = document.querySelectorAll('.branding');
 
+
+indicator.style.width = tabs[0].getBoundingClientRect().width + 'px';
+indicator.style.left = tabs[0].getBoundingClientRect().left - tabs[0].parentElement.getBoundingClientRect().left + 'px';
+
+tabs.forEach((tab) =>{
+    tab.addEventListener('click',()=>{
+        indicator.style.width = tab.getBoundingClientRect().width + 'px';
+        indicator.style.left = tab.getBoundingClientRect().left - tab.parentElement.getBoundingClientRect().left + 'px';
+
+        tabs.forEach(t => t.classList.remove('text-whiteColor'));
+        tab.classList.add('text-whiteColor');
+
+        let tabval = tab.getAttribute('data-tabs');
+
+        all.forEach(item =>{
+            item.style.display = 'none'
+        });
+
+        if(tabval == 'uiux'){
+                uiux.forEach(item =>{
+                item.style.display = 'block'
+            });
+        }else if(tabval == 'branding'){
+            branding.forEach(item =>{
+                item.style.display = 'block'
+            })
+        }
+        else if(tabval == 'apps') {
+            apps.forEach(item =>{
+                item.style.display = 'block'
+            })
+        }else {
+            all.forEach(item =>{
+                item.style.display = 'block'
+            });
+        }
+
+    })
+})
 /*~~~~~~~~~~~~~~~ CHANGE BACKGROUND HEADER ~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~ SHOW SCROLL UP ~~~~~~~~~~~~~~~*/

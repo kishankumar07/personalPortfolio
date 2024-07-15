@@ -1032,6 +1032,12 @@ section{
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -1089,6 +1095,11 @@ section{
   background-color: hsl(209 100% 97% / var(--tw-bg-opacity));
 }
 
+.bg-whiteColor{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1136,6 +1147,10 @@ section{
   padding-bottom: 1.25rem;
 }
 
+.pb-3{
+  padding-bottom: 0.75rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1173,6 +1188,11 @@ section{
   line-height: 1rem;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -1194,6 +1214,11 @@ section{
 .text-whiteColor{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-primaryColor{
+  --tw-text-opacity: 1;
+  color: hsl(209 87% 21% / var(--tw-text-opacity));
 }
 
 .opacity-5{
@@ -1333,6 +1358,19 @@ section{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+/* Experience & Education */
+
+.exp_edu_card,
+    .exp_edu_card > p{
+  transition-duration: 300ms;
+}
+
+.exp_edu_card:hover,
+    .exp_edu_card:hover > p{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .hover\:rotate-0:hover{
   --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1348,9 +1386,19 @@ section{
   border-color: hsl(209 74% 45% / var(--tw-border-opacity));
 }
 
+.hover\:bg-primaryColorLight:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(209 74% 45% / var(--tw-bg-opacity));
+}
+
 .hover\:text-whiteColor:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark\:bg-darkBodyColor:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: hsl(216 100% 4% / var(--tw-bg-opacity));
 }
 
 .dark\:bg-darkSectionColor:is(.dark *){
@@ -1361,6 +1409,11 @@ section{
 .dark\:bg-sectionColor:is(.dark *){
   --tw-bg-opacity: 1;
   background-color: hsl(209 100% 97% / var(--tw-bg-opacity));
+}
+
+.dark\:hover\:bg-primaryColorLight:hover:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: hsl(209 74% 45% / var(--tw-bg-opacity));
 }
 
 @media (min-width: 480px){
@@ -1424,6 +1477,12 @@ section{
 
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:space-y-10 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
   }
 
   .md\:px-6{
@@ -1532,6 +1591,11 @@ section{
     font-size: 450px;
   }
 
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .lg\:text-primaryColor{
     --tw-text-opacity: 1;
     color: hsl(209 87% 21% / var(--tw-text-opacity));
@@ -1546,5 +1610,10 @@ section{
 @media (min-width: 1400px){
   .xl\:max-w-lg{
     max-width: 32rem;
+  }
+
+  .xl\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }

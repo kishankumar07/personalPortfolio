@@ -92,4 +92,14 @@
     .work_card:hover div i {
         @apply -rotate-90;
     }
+
+    /* Experience & Education */
+    .exp_edu_card,
+    .exp_edu_card > p {
+        @apply duration-300;
+    }
+    .exp_edu_card:hover,
+    .exp_edu_card:hover > p {
+        @apply text-whiteColor
+    }
 }

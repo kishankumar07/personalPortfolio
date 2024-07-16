@@ -879,6 +879,14 @@ section{
   margin-top: 1.5rem;
 }
 
+.mt-3{
+  margin-top: 0.75rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .block{
   display: block;
 }
@@ -940,6 +948,14 @@ section{
   max-width: 36rem;
 }
 
+.max-w-44{
+  max-width: 11rem;
+}
+
+.max-w-16{
+  max-width: 4rem;
+}
+
 .origin-center{
   transform-origin: center;
 }
@@ -998,6 +1014,10 @@ section{
   flex-wrap: wrap;
 }
 
+.place-items-center{
+  place-items: center;
+}
+
 .items-center{
   align-items: center;
 }
@@ -1036,6 +1056,12 @@ section{
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden{
@@ -1143,12 +1169,22 @@ section{
   padding-bottom: 1.25rem;
 }
 
-.pb-5{
-  padding-bottom: 1.25rem;
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-7{
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 
 .pb-3{
   padding-bottom: 0.75rem;
+}
+
+.pb-5{
+  padding-bottom: 1.25rem;
 }
 
 .text-center{
@@ -1178,6 +1214,11 @@ section{
   font-size: 400px;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1188,17 +1229,16 @@ section{
   line-height: 1rem;
 }
 
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .font-bold{
   font-weight: 700;
 }
 
 .uppercase{
   text-transform: uppercase;
+}
+
+.capitalize{
+  text-transform: capitalize;
 }
 
 .text-primaryColorLight{
@@ -1216,11 +1256,6 @@ section{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-primaryColor{
-  --tw-text-opacity: 1;
-  color: hsl(209 87% 21% / var(--tw-text-opacity));
-}
-
 .opacity-5{
   opacity: 0.05;
 }
@@ -1235,6 +1270,21 @@ section{
 
 .blur-\[150px\]{
   --tw-blur: blur(150px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.grayscale-0{
+  --tw-grayscale: grayscale(0);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.grayscale-\[8\]{
+  --tw-grayscale: grayscale(8);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.grayscale-\[85\%\]{
+  --tw-grayscale: grayscale(85%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -1371,9 +1421,25 @@ section{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+/* My skills */
+
+.skills_card img{
+  transition-duration: 300ms;
+}
+
+.skills_card:hover img{
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:rotate-0:hover{
   --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:border:hover{
+  border-width: 1px;
 }
 
 .hover\:border-primaryColor:hover{
@@ -1391,9 +1457,19 @@ section{
   background-color: hsl(209 74% 45% / var(--tw-bg-opacity));
 }
 
+.hover\:bg-primaryColor:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(209 87% 21% / var(--tw-bg-opacity));
+}
+
 .hover\:text-whiteColor:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:grayscale-0:hover{
+  --tw-grayscale: grayscale(0);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .dark\:bg-darkBodyColor:is(.dark *){
@@ -1477,6 +1553,10 @@ section{
 
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:gap-10{
+    gap: 2.5rem;
   }
 
   .md\:space-y-10 > :not([hidden]) ~ :not([hidden]){
@@ -1572,6 +1652,11 @@ section{
     padding-bottom: 0px;
   }
 
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .lg\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1589,11 +1674,6 @@ section{
 
   .lg\:text-\[450px\]{
     font-size: 450px;
-  }
-
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 
   .lg\:text-primaryColor{

@@ -650,7 +650,82 @@
       </section>
 
       <!--~~~~~~~~~~~~~~~ Contact ~~~~~~~~~~~~~~~-->
-      <section></section>
+      <section id="contact" class="container">
+        <div class="flex flex-col md:flex-row-reverse gap-16 md:gap-5 md:items-center"> 
+          <!-- content -->
+          <div class="flex-1 space-y-7 md:space-y-10 lg:pl-40">
+            <div class="flex items-start gap-4">
+              <div class="text-whiteColor bg-gradient-to-b from-primaryColor to-primaryColorLight h-10 w-10 lg:h-14 lg:w-14 rounded-full grid place-items-center">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="space-y-1">
+                  <p class="text-sm">Phone</p>
+                  <p class="font-bold hover:text-primaryColorLight duration-300 cursor-pointer">+91-7907131945</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="text-whiteColor bg-gradient-to-b from-primaryColor to-primaryColorLight h-10 w-10 lg:h-14 lg:w-14 rounded-full grid place-items-center">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <div class="space-y-1">
+                  <p class="text-sm">Email</p>
+                  <p class="font-bold hover:text-primaryColorLight duration-300 cursor-pointer">kishantashok@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="text-whiteColor bg-gradient-to-b from-primaryColor to-primaryColorLight h-10 w-10 lg:h-14 lg:w-14 rounded-full grid place-items-center">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="space-y-1">
+                  <p class="text-sm">Address</p>
+                  <p class="font-bold hover:text-primaryColorLight duration-300 cursor-pointer">Thrissur,Kerala,India</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- contact form -->
+           <form class="flex-1 bg-sectionColor dark:bg-darkSectionColor border border-primaryColor px-5 py-10 rounded-3xl space-y-3">
+                <!-- subtitle & description -->
+                 <div class="flex flex-col">
+                      <h2 class="subtitle text-nowrap">Let's work together</h2>
+                      <p class="max-w-2xl py-3">I create elegantly simple designs and code with passion. It's as straightforward as that!</p>
+                 </div>
+
+                 <div class="space-y-3 mt-7">
+                    <div class="flex flex-col md:flex-row items-center gap-3">
+                        <input type="text" placeholder="First Name" name="firstname" autocomplete="off">
+                        <input type="text" placeholder="Last Name" name="lastname" autocomplete="off">
+                    </div>
+
+
+                    <div class="flex flex-col md:flex-row items-center gap-3">
+                      <input type="email" placeholder="Emai" name="email" autocomplete="off">
+                      <input type="phone" placeholder="Phone" name="phone" autocomplete="off">
+                  </div>
+                 </div> 
+
+                 <select>
+                    <option selected>Choose a service</option>
+                    <option value="branding">Branding Design</option>
+                    <option value="web">Web Design</option>
+                    <option value="uiux">UI/UX Design</option>
+                    <option value="app">App Design</option>
+                 </select>
+
+                 <div class="space-y-3">
+                    <textarea name="message" rows="5" placeholder="Message"></textarea>
+                    <button class="btn">
+                        <span class="z-10">Send message</span>
+                    </button>
+                 </div>
+
+           </form>  
+
+        </div>
+      </section>
     </main>
 
     <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->

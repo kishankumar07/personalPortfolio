@@ -479,6 +479,37 @@ section{
   }
 }
 
+input,
+    select,textarea{
+  width: 100%;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+input:is(.dark *),
+    select:is(.dark *),textarea:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: hsl(216 100% 4% / var(--tw-bg-opacity));
+}
+
+input:focus,
+    input:active,
+    select:focus,
+    select:active,
+    textarea:focus,
+    textarea:active{
+  --tw-border-opacity: 1;
+  border-color: hsl(209 74% 45% / var(--tw-border-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -905,6 +936,10 @@ section{
   margin-top: 1.5rem;
 }
 
+.mt-7{
+  margin-top: 1.75rem;
+}
+
 .block{
   display: block;
 }
@@ -974,6 +1009,10 @@ section{
   max-width: 36rem;
 }
 
+.flex-1{
+  flex: 1 1 0%;
+}
+
 .origin-center{
   transform-origin: center;
 }
@@ -1036,6 +1075,10 @@ section{
   place-items: center;
 }
 
+.items-start{
+  align-items: flex-start;
+}
+
 .items-center{
   align-items: center;
 }
@@ -1052,8 +1095,16 @@ section{
   gap: 2.5rem;
 }
 
+.gap-16{
+  gap: 4rem;
+}
+
 .gap-3{
   gap: 0.75rem;
+}
+
+.gap-4{
+  gap: 1rem;
 }
 
 .gap-5{
@@ -1076,14 +1127,30 @@ section{
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
 .space-y-5 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
+.space-y-7 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden{
   overflow: hidden;
+}
+
+.text-nowrap{
+  text-wrap: nowrap;
 }
 
 .rounded-2xl{
@@ -1144,8 +1211,18 @@ section{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gradient-to-b{
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-primaryColor{
+  --tw-gradient-from: hsl(209, 87%, 21%) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(209 87% 21% / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .from-primaryColorLight{
@@ -1156,6 +1233,10 @@ section{
 
 .to-primaryColor{
   --tw-gradient-to: hsl(209, 87%, 21%) var(--tw-gradient-to-position);
+}
+
+.to-primaryColorLight{
+  --tw-gradient-to: hsl(209, 74%, 45%) var(--tw-gradient-to-position);
 }
 
 .p-3{
@@ -1201,6 +1282,11 @@ section{
   padding-bottom: 6rem;
 }
 
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1209,6 +1295,16 @@ section{
 .py-7{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.px-14{
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .pb-3{
@@ -1510,6 +1606,11 @@ section{
   background-color: hsl(209 74% 45% / var(--tw-bg-opacity));
 }
 
+.hover\:text-primaryColorLight:hover{
+  --tw-text-opacity: 1;
+  color: hsl(209 74% 45% / var(--tw-text-opacity));
+}
+
 .hover\:text-whiteColor:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1608,8 +1709,24 @@ section{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
+  .md\:flex-row-reverse{
+    flex-direction: row-reverse;
+  }
+
+  .md\:items-center{
+    align-items: center;
+  }
+
   .md\:gap-10{
     gap: 2.5rem;
+  }
+
+  .md\:gap-5{
+    gap: 1.25rem;
   }
 
   .md\:space-y-10 > :not([hidden]) ~ :not([hidden]){
@@ -1660,6 +1777,14 @@ section{
     display: none;
   }
 
+  .lg\:h-14{
+    height: 3.5rem;
+  }
+
+  .lg\:w-14{
+    width: 3.5rem;
+  }
+
   .lg\:w-auto{
     width: auto;
   }
@@ -1707,6 +1832,10 @@ section{
   .lg\:py-0{
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .lg\:pl-40{
+    padding-left: 10rem;
   }
 
   .lg\:text-2xl{
